@@ -1,0 +1,47 @@
+.profile {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 550;
+  font-size: 30px;
+}
+
+.links {
+  box-sizing: border-box;
+  background-color: rgb(221, 218, 218);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.picture {
+  padding: 25px;
+}
+
+.summary {
+  padding: 25px;
+}
+
+.summary * {
+  margin: 5px;
+}
+
+.summary-detail {
+  font-size: 12px;
+}
+
+.main-job-title {
+  font-size: 17px;
+}
