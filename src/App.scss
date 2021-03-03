@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-colour);
+  color: var(--font-colour);
+  background: #f1f2f5;
+}
+
+.CV {
+  width: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-colour);
+  color: var(--primary-colour);
+  box-shadow: 0px 0px 14px 9px rgba(0, 0, 0, 0.18);
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+.left-content {
+  width: 500x;
+}
+
+.right-content {
+  padding-right: 30px;
+  padding-left: 30px;
+  flex: 1;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin: 5px;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #e98786;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #f8c8c8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,7 +1,10 @@
-import "./App.css";
+import "./App.scss";
 import React from "react";
 import { Header } from "./Components/Header";
 import { Experience } from "./Components/Experience";
+import { Technologies } from "./Components/Technologies";
+import { Hobbies } from "./Components/Hobbies";
+import "./Theme.scss";
 
 export class CV extends React.Component {
   render() {
@@ -60,6 +63,56 @@ export class CV extends React.Component {
       },
     ];
 
+    const language = [
+      {
+        name: "HTML",
+        level: 50,
+      },
+      {
+        name: "CSS",
+        level: 60,
+      },
+      {
+        name: "JavaScript",
+        level: 40,
+      },
+      {
+        name: "Java",
+        level: 30,
+      },
+      {
+        name: "React",
+        level: 35,
+      },
+    ];
+
+    const education = [
+      {
+        title: "A Levels",
+        company: "East Berkshire College",
+        date: "2009 - 2010",
+        location: " ",
+        responsibilities: ["English Language and Literature"],
+      },
+      {
+        title: "GCSEs",
+        company: "Garth Hill College/Uxbridge College",
+        date: "2003 - 2008",
+        location: "A*-C",
+        responsibilities: [
+          "A*-C in Biology, Chemistry, Physics, Art and Design, Maths, English Language, English Literature, German, Adult Literacy and Adult Numeracy, with a Pass in Digital Applications (DiDA).",
+        ],
+      },
+    ];
+
+    const hobbies = [
+      "Gaming",
+      "Costume Design",
+      "Health and Fitness",
+      "Eating",
+      "Stuart",
+    ];
+
     return (
       <div className="CV">
         <Header />
@@ -70,7 +123,23 @@ export class CV extends React.Component {
               <Experience jobInfo={x} />
             ))}
           </div>
-          <div className="right-content">fkdjfdkj</div>
+          <div className="right-content">
+            <h1 className="workexp">TECHNICAL SKILLS</h1>
+            {language.map((x) => (
+              <Technologies language={x} />
+            ))}
+            <br></br>
+            <h1 className="workexp">EDUCATION</h1>
+
+            {education.map((x) => (
+              <Experience jobInfo={x} />
+            ))}
+
+            <h1 className="workexp">HOBBIES</h1>
+            {hobbies.map((x) => (
+              <Hobbies title={x} />
+            ))}
+          </div>
         </div>
       </div>
     );

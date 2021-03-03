@@ -1,5 +1,5 @@
 import React from "react";
-import "./Experience.css";
+import "./Experience.scss";
 
 export class Experience extends React.Component {
   render() {
@@ -16,6 +16,7 @@ export class Experience extends React.Component {
           <span className="location">{this.props.jobInfo.location}</span>
         </div>
         <ul className="responsibilities">{responsibilities}</ul>
+        <br></br>
       </div>
     );
   }

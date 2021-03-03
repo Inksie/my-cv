@@ -1,12 +1,26 @@
 import React from "react";
-import "./Header.css";
+import "./Header.scss";
 import { Link } from "./Link";
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+}
 
 export class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <div className="content">
+        <div class="theme-switch-wrapper">
+          <label className="theme-switch" for="checkbox" icon="light_mode">
+            <input type="checkbox" id="checkbox" onChange={switchTheme} />
+            <div class="slider round"></div>
+          </label>
+        </div>
+        <div className="header-content">
           <div className="picture">
             <img
               src={process.env.PUBLIC_URL + "Capture.PNG"}
@@ -39,7 +53,7 @@ export class Header extends React.Component {
           <Link
             icon="link"
             link="https://www.linkedin.com/in/stephanie-mansell-50677197/"
-            text="www.linkedin.com/in/stephanie-mansell-50677197"
+            text="linkedin.com/in/stephanie-mansell-50677197"
           />
         </div>
       </div>
